@@ -1,0 +1,330 @@
+.button {
+position: fixed;
+left: 0.5rem;
+top: 0.5rem;
+width: 200px;
+height: 25px;
+border: solid 3px white;
+border-radius: 7%;
+background-color: #333131;
+color: white;
+transition: 0.5s ease;
+cursor: pointer;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.button:hover {
+  position: fixed;
+  color: black;
+  background-color: white;
+  border: solid 3px #333131;
+  transition: 0.5s ease;
+  }
+
+section {
+display: grid;
+place-items: center;
+align-content: center;
+}
+
+.oula {
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+  color :aqua;
+font-size: 4.5rem;
+margin-top: 0%;
+  }
+  
+  .show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0%);
+  }
+
+/*side_bar*/
+.sidenav {
+  height: 100%; 
+  width: 250px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: #111; 
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
+  left: -250px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#hello, #liste-analogies  {
+  transition: margin-left 0.5s;
+}
+
+.sidebar-open #hello, .sidebar-open #liste-analogies  {
+  margin-left: 250px;
+}
+
+.sidebar-open .sidenav {
+  left:0;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*analogies - Inspiré du code de Maxime Scholtes car j'aime beaucoup le design image + texte, le code javascript convenait également à ce que je voulais faire même si il a fallu l'adapter pour l'animation de background */
+#liste-analogies section, #nouvelleanalogie section {
+  display: flex;
+  align-items: center;
+  gap:3rem;
+}
+
+.titre-ana {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.valeur-ana {
+  color: white;
+}
+
+.text-ana {
+  font-size: 1.35rem;
+  color: white;
+}
+
+
+.image {
+  height: 375px;
+  border: solid #333131 10px;
+  border-radius: 25%;
+}
+
+.sijetais {
+  font-family: Arial, Helvetica, sans-serif;
+color: aqua;
+}
+
+.jeserais {
+  font-family: Arial, Helvetica, sans-serif;
+  color: aqua;
+}
+
+
+/*background*/
+body {
+  transition: background 1.0s;
+  background-repeat: no-repeat;
+  background-size: cover ;
+  background-attachment:fixed;
+}
+.section {
+  height: 100vh;
+  padding: 20px;
+}
+
+.centerCarre {
+  min-width: 250px;
+}
+
+#nouvelleanalogie {
+  transition: margin-left 0.5s;
+}
+
+.sidebar-open #nouvelleanalogie{
+  margin-left: 250px;
+}
+
+/*pop up*/
+footer {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  height: 50vh;
+}
+
+.deums {
+  color: black;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#modal {
+  max-width:500px;
+  height: 200px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  position:absolute;
+  background-color: white;
+}
+
+#show-modal{
+  margin: 0;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+#close-modal{
+  margin: 0;
+  border: none;
+  font-size: 1.1rem;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  cursor: pointer;
+}
+
+
+#modal {
+  height: 90%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: #333131 solid 10px;
+  border-radius: 5%;
+  padding: 1rem;
+}
+
+.titre-popup {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #000000;
+  text-align: center;
+}
+
+.texte-popup {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.copyright {
+  text-align: center;
+  font-weight: 800;
+}
+
+#show-modal {
+  width: 250px;
+  height: 50px;
+  border: solid 3px white;
+  background-color: #333131;
+  color: white;
+  transition: 0.5s ease;
+}
+
+#show-modal:hover {
+  color: black;
+  background-color: white;
+  border: solid 3px #333131;
+  transition: 0.5s ease;
+}
+
+#close-modal {
+  width: 250px;
+  height: 50px;
+  border: solid 3px white;
+  background-color: #333131;
+  color: white;
+  transition: 0.5s ease;
+}
+
+#close-modal:hover {
+   color: black;
+  background-color: white;
+  border: solid 3px #333131;
+  transition: 0.5s ease;
+}
+
+.form {
+  width: 350px;
+  height: 800px;
+}
+
+.inputs {
+  width: 200px;
+  padding: 8px;
+  margin: auto;
+  margin-bottom: 10px;
+  border: solid 3px white;
+  background-color: #333131;
+  border-radius: 5%;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.inputs:hover {
+  background-color: #ffffff;
+  border-color: #000000;
+  transition: 0.2s ease;
+  color: black;
+}
+
+#send {
+  width: 280px;
+  cursor: pointer;
+}
+
+
+.etvous {
+  font-size: 2.6rem;
+  color: white;
+}
+
+h3 {
+  color: white;
+}

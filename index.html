@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  <script type="text/javascript" src="script.js"></script>
+    <script src="data.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portrait chinois - Jesse François</title>
+    <!-- Accueil -->
+    <section id="hello" class="section" style="flex-direction:row;" data-img="fireflies.jpg"><H1><p class="oula">Portrait chinois de</p></H1><h2><p class="oula">Jesse François</p></h2><p class="text-ana">Dans le cadre de mes études en BUT MMI, j’ai réalisé un portrait chinois en HTML, CSS et JavaScript. Je vous laisse le découvrir.</p></section>
+
+</head>
+<body class="sidebar-open">
+
+
+<!-- Side bar -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#animal">Un animal</a>
+  <a href="#univers">Un univers fictif</a>
+  <a href="#jeu">Un jeu</a>
+  <a href="#boisson">Une boisson</a>
+  <a href="#artiste">Un artiste</a>
+  <a href="#film">Un film</a>
+  <a href="#solitaire">Un trait de caractère</a>
+</div>
+
+<span class="button" onclick="openNav()">Ouvrir la barre de navigation</span>
+
+<div id="main">
+</div>
+
+<!-- Content-->
+
+<div id="liste-analogies"></div>
+
+<!-- Nouvelle analogie -->
+
+<section class="formu" id="formulaire">
+  <h2 class="etvous">Et si c'était vous ?</h2>
+  <div class="form">
+  <form method="get">
+      <h3><label for="mail">Votre email :</label></h3>
+      <input type="email" class="inputs" placeholder="exemple@gmail.com" id="mail" required>
+      <h3><label for="analogie">Si vous étiez...</label></h3>
+      <input type="text" class="inputs" placeholder="exemple : un animal" id="analogie" required>
+      <h3><label for="analogie">Vous seriez...</label></h3>
+      <input type="text" class="inputs" placeholder="exemple : un lion" id="valeuranalogie" required>
+      <h3><label for="analogie">Image</label></h3>
+      <input type="url" class="inputs" placeholder="URL de votre image" name="img" id="img" required>
+      <h3><label for="analogie">Image de fond</label></h3>
+      <input type="url" class="inputs" placeholder="896x512 pour que ça marche bien" name="dataimg" id="dataimg" required>
+      <h3><h3><label for="analogie">Pourquoi ?</label></h3></h3>
+      <textarea class="arg inputs" type="text" id="text" placeholder="Car ..." cols="30" rows="5"
+          spellcheck="true"></textarea>
+      <input class="inputs" type="submit" value="Envoyer" id="send">
+      <p id="succes"></p>
+  </form>
+  </div>
+</section>
+
+<div id="nouvelleanalogie">
+</div>
+</body>
+
+<!-- pop up -->
+
+<footer>
+  <button class="popup-mentions" id="show-modal">Mentions légales</button>
+  <div id="overlay">
+      <div id="modal">
+          <div>
+              <p class="titre-popup">Éditeur</p>
+                  <p class="texte-popup">Jesse François, étudiant en MMI à l'Université Gustave Eiffel</p>
+                  <p class="titre-popup">Hébergeur</p>
+                  <p class="texte-popup"><br> Université Gustave Eiffel - 2 rue Albert Einstein, 77420 Champs-sur-Marne, France - 01 60 95 75 00 - webmaster@univ-eiffel.fr</p>
+                
+              <p class="titre-popup">Images : Image encadrée / Background</p>
+                  <p class="texte-popup">Acceuil : Michal (Mertl) </p>
+                  <p class="texte-popup">1ere analogie : Wikimedia Common / Wallpapers.com </p>
+                  <p class="texte-popup">2eme analogie : Daniel Jiménez Villalba sur Wallpapersmug.com / Premium.coding sur Pinterest </p>
+                  <p class="texte-popup">3eme analogie : Activision, éditeur de Call of Duty </p>
+                  <p class="texte-popup">4eme analogie : Adobe Stock / Pngtree </p>
+                  <p class="texte-popup">5eme analogie : Paris Match / Idatul Milla sur Vecteezy </p>
+                  <p class="texte-popup">6eme analogie : Poster du film / Wallpaper Cave </p>
+                  <p class="texte-popup">7eme analogie : Creativefabrica.com / Ahasanara Akter sur Vecteezy </p>
+              <p class="titre-popup">Données à caractère personnel</p>
+                  <p class="texte-popup">Le formulaire permettant la création d’une analogie personnalisée recueille votre adresse de courriel et votre adresse IP. Pour toute question portant sur la collecte ou le traitement de vos données à caractère personnel par l’UPEM, vous pouvez saisir la personne responsable du traitement des données qui est : Philippe Gambette (philippe.gambette@univ-eiffel.fr). Les fichiers détenus par l'UPEM qui comportent des données à caractère personnel ne seront jamais transmis à des tiers et ne feront jamais l'objet d'une commercialisation.</p>
+          </div>
+          <button id="close-modal">Fermer</button>
+      </div>
+  </div>
+</footer>
+
+
+
+</html>
